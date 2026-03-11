@@ -1,7 +1,7 @@
 export const personalData = {
-  name: "Abdul Basit",
+  name: "Thanush Arugonda",
   profile: "/pic3.jpg",
-  designation: "Full-Stack Web",
+  designation: "Master's Student",
   designationAlternateWords: [
     "Developer.",
     "Engineer.",
@@ -10,11 +10,11 @@ export const personalData = {
     "Designer.",
   ],
   description:
-    "I’m Abdul Basit, a dedicated Full-Stack Developer specializing in TypeScript and crafting responsive, user‑centric interfaces with React and Next.js. I build full‑stack websites using Next.js and Prisma—leveraging Prisma’s type‑safe ORM to integrate robust database layers seamlessly into my applications. Passionate about continuous learning, I stay at the forefront of emerging technologies to deliver scalable, maintainable solutions that exceed expectations.",
-  email: "rajaabdulbasit@gmail.com",
-  phone: "+923175972977",
-  address: "Islamabad",
-  github: "https://github.com/abdulbasit-005",
+    "I’m Thanush Arugonda, a dedicated Full-Stack Developer specializing in TypeScript and crafting responsive, user‑centric interfaces with React and Next.js. I build full‑stack websites using Next.js and Prisma—leveraging Prisma’s type‑safe ORM to integrate robust database layers seamlessly into my applications. Passionate about continuous learning, I stay at the forefront of emerging technologies to deliver scalable, maintainable solutions that exceed expectations.",
+  email: "thanusharugonda@gmail.com",
+  phone: "+49 15511015511",
+  address: "Germany",
+  github: "https://github.com/Thanush-11",
   facebook: "https://www.facebook.com/profile.php?id=100092595303195",
   Instagram: "https://www.instagram.com/captain_ghost005",
   linkedIn: "https://www.linkedin.com/in/abdulbasit005/",

@@ -236,7 +236,7 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">02</span>
                     <p className="ml-4">
                       <span className="text-slate-200">name:</span>{" "}
-                      <span className="text-red-300">'Abdul Basit'</span>,
+                      <span className="text-red-300">'Thanush Arugonda'</span>,
                     </p>
                   </div>
                   <div className="flex gap-4">
@@ -250,9 +250,7 @@ const HeroSection = () => {
                     <span className="text-slate-600 italic">04</span>
                     <p className="ml-4">
                       <span className="text-slate-200">skills:</span> [
-                      <span className="text-red-300">
-                        'NextJS', 'GSAP', 'AI'
-                      </span>
+                      <span className="text-red-300">'NextJS', 'ML', 'AI'</span>
                       ],
                     </p>
                   </div>
