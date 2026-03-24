@@ -106,7 +106,7 @@ const HeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[90vh] flex flex-col items-center justify-center py-12 lg:py-24 overflow-hidden"
+      className="relative min-h-[90vh] flex flex-col items-center justify-center py-12 lg:py-30 overflow-hidden"
     >
       {/* Background Ambient Glows */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-red-600/10 blur-[120px] rounded-full animate-pulse" />
@@ -120,21 +120,17 @@ const HeroSection = () => {
               AI | ML | Python
             </span>
             <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
-              Hi,{" "}
+              Hi, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
-                I'm
+                I'm{" "}
               </span>
-              <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-950">
-                Thanush Arugonda
+                Thanush
               </span>
             </h1>
             <p className="hero-heading text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
               Master's Student in Artificial Intelligence for Smart Sensors and
               Actuators.
-              <br />
-              Open to Working Student / Internship oppurtunities in AI and
-              Software Development.
             </p>
           </div>
 
@@ -172,14 +168,14 @@ const HeroSection = () => {
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                 <span className="relative flex items-center gap-2">
-                  Contact Me <RiContactsFill />
+                  Get in touch <RiContactsFill />
                 </span>
               </Link>
 
               <Link
                 href={personalData.resume}
                 target="_blank"
-                className="group px-2 py-3 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-5 py-3 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
               >
                 <>
                   <Image
@@ -196,7 +192,7 @@ const HeroSection = () => {
               <Link
                 href={personalData.resume}
                 target="_blank"
-                className="group px-2 py-3 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-5 py-3 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
               >
                 <>
                   <Image
@@ -215,92 +211,38 @@ const HeroSection = () => {
         </div>
 
         {/* Right Side: Animated Code Card */}
-        <div className="order-1 lg:order-2 flex justify-center">
+        <div className="order-1 lg:order-2 lg:col-span-1 flex justify-center lg:justify-end">
           <Tilt
-            perspective={1000}
+            perspective={1500}
             glareEnable={true}
-            glareMaxOpacity={0.1}
-            scale={1.02}
-            className="w-full max-w-[550px]"
+            glareMaxOpacity={0.2}
+            glareColor="#ef4444"
+            scale={1.05}
+            className="about-image-card w-full max-w-[480px]"
           >
-            <div
-              ref={codeCardRef}
-              className="relative rounded-3xl border border-white/10 bg-[#050505]/80 backdrop-blur-xl overflow-hidden shadow-2xl group"
-            >
-              {/* Card Header */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-red-400/50" />
-                  <div className="w-3 h-3 rounded-full bg-red-300/20" />
-                </div>
-                <div className="text-xs font-mono text-slate-500 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                  Portfolio.ts
-                </div>
-              </div>
+            <div className="relative group w-full">
+              {/* Decorative Frames */}
+              <div className="absolute -inset-4 border border-red-500/20 rounded-3xl group-hover:-inset-6 transition-all duration-500 opacity-50" />
+              <div className="absolute -inset-8 border border-red-950/10 rounded-[40px] group-hover:-inset-12 transition-all duration-700 delay-75 opacity-30" />
 
-              <div className="p-6 lg:p-10">
-                <code className="font-mono text-xs md:text-sm lg:text-base leading-relaxed">
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">01</span>
-                    <p>
-                      <span className="text-red-500">const</span>{" "}
-                      <span className="text-white">developer</span> = {"{"}
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">02</span>
-                    <p className="ml-4">
-                      <span className="text-slate-200">name:</span>{" "}
-                      <span className="text-red-300">'Thanush Arugonda'</span>,
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">03</span>
-                    <p className="ml-4">
-                      <span className="text-slate-200">focus:</span> [
-                      <span className="text-red-300">
-                        'Python', 'Machine Learning', 'Deep Learning'
-                      </span>
-                      ],
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">04</span>
-                    <p className="ml-4">
-                      <span className="text-slate-200">location:</span>
-                      <span className="text-red-300">'Germany'</span>,
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">05</span>
-                    <p className="ml-4">
-                      <span className="text-slate-200">passionate:</span>{" "}
-                      <span className="text-red-600">true</span>,
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">06</span>
-                    <p className="ml-4">
-                      <span className="text-slate-200">status:</span>{" "}
-                      <span className="text-red-400">
-                        "Open to Working Student or Internship Roles"
-                      </span>
-                    </p>
-                  </div>
-                  <div className="flex gap-4">
-                    <span className="text-slate-600 italic">07</span>
-                    <p>{"};"}</p>
-                  </div>
-                  <div className="flex gap-4 mt-4">
-                    <span className="text-slate-600 italic">08</span>
-                    <p>
-                      <span className="text-red-500">developer</span>.
-                      <span className="text-white">showcase</span>();
-                    </p>
-                  </div>
-                </code>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(239,68,68,0.15)] bg-[#050505]">
+                <Image
+                  src={personalData.profile}
+                  fill
+                  alt={personalData.name}
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="text-white font-bold text-center tracking-widest uppercase text-xs">
+                    Built with Passion
+                  </p>
+                </div>
               </div>
             </div>
           </Tilt>

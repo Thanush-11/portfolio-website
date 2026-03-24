@@ -49,7 +49,7 @@ function About() {
   }, []);
 
   return (
-    <div id="about" className="relative py-24 lg:py-48 overflow-hidden">
+    <div id="about" className="relative py-24 lg:py-30 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-red-900/10 blur-[120px] rounded-full pointer-events-none" />
@@ -81,7 +81,9 @@ function About() {
               </div>
 
               <div className="about-description text-slate-300 text-lg lg:text-xl leading-relaxed text-justify space-y-4 font-medium italic">
-                {personalData.description}
+                {personalData.description.map((para, index) => (
+                  <p key={index}>{para}</p>
+                ))}
               </div>
 
               {/* Decorative Accent */}
@@ -90,23 +92,23 @@ function About() {
 
             <div className="flex flex-wrap gap-8 items-center mt-4">
               <div className="flex flex-col">
-                <span className="text-3xl font-black text-white">2+</span>
+                <span className="text-3xl font-black text-white">'x'</span>
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-                  Years Experience
+                  Projects Built
                 </span>
               </div>
               <div className="w-[1px] h-10 bg-white/10" />
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-white">20+</span>
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-                  Global Projects
+                  Python Problems solved
                 </span>
               </div>
               <div className="w-[1px] h-10 bg-white/10" />
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-white">10+</span>
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-                  Tech Mastered
+                  Certifications
                 </span>
               </div>
             </div>
