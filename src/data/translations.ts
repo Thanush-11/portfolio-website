@@ -3,6 +3,7 @@ export const translations = {
     nav: {
       about: "About",
       education: "Education",
+      certifications: "Certifications",
       experience: "Experience",
       skills: "Skills",
       projects: "Projects",
@@ -21,6 +22,7 @@ export const translations = {
     nav: {
       about: "Über mich",
       education: "Ausbildung",
+      certifications: "Zertifikate",
       experience: "Erfahrung",
       skills: "Fähigkeiten",
       projects: "Projekte",

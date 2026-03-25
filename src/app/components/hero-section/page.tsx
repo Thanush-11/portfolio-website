@@ -88,6 +88,32 @@ const HeroSection = () => {
         });
       };
 
+      // Code card entrance animation
+      gsap.fromTo(
+        codeCardRef.current,
+        { opacity: 0, x: 50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power4.out",
+        },
+      );
+
+      // Line-by-line code animation
+      gsap.fromTo(
+        ".code-line",
+        { opacity: 0, x: 20 },
+        {
+          opacity: 1,
+          x: 0,
+          stagger: 0.08,
+          duration: 0.5,
+          ease: "power2.out",
+          delay: 0.3,
+        },
+      );
+
       runDesignationAnimation();
 
       // Floating animation for social icons

@@ -21,6 +21,7 @@ const Navbar = () => {
   const navItems = [
     { label: t.nav.about, to: "about" },
     { label: t.nav.education, to: "education" },
+    { label: t.nav.certifications, to: "certifications" },
     { label: t.nav.experience, to: "experience" },
     { label: t.nav.skills, to: "skills" },
     { label: t.nav.projects, to: "projects" },
