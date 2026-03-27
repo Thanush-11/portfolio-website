@@ -9,6 +9,7 @@ import { personalData } from "@/../utils/Data/PersonalData";
 import ContactWithoutCaptcha from "./contact-without-captcha";
 import SectionReveal from "../SectionReveal";
 import { MapPin, Send, MessageSquare } from "lucide-react";
+import { BsEnvelope } from "react-icons/bs";
 
 interface ContactLinkProps {
   href: string;
@@ -86,16 +87,9 @@ function ContactSection() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-          {/* Left Side: Form */}
-          <div className="lg:col-span-7">
-            <SectionReveal direction="right">
-              <ContactWithoutCaptcha />
-            </SectionReveal>
-          </div>
-
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           {/* Right Side: Info & Socials */}
-          <div className="lg:col-span-5 flex flex-col gap-12">
+          <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12 max-w-4xl mx-auto">
             <SectionReveal direction="left">
               <div className="flex flex-col gap-6">
                 <h3 className="text-xl font-bold text-white flex items-center gap-3">
@@ -133,7 +127,7 @@ function ContactSection() {
                 <h3 className="text-xl font-bold text-white">
                   Social Presence
                 </h3>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-5">
                   {[
                     {
                       href: personalData.github,
@@ -146,19 +140,9 @@ function ContactSection() {
                       color: "#0077b5",
                     },
                     {
-                      href: personalData.twitter,
-                      icon: FaXTwitter,
-                      color: "#1da1f2",
-                    },
-                    {
-                      href: personalData.stackOverflow,
-                      icon: FaStackOverflow,
-                      color: "#f48024",
-                    },
-                    {
-                      href: personalData.facebook,
-                      icon: FaFacebook,
-                      color: "#1877f2",
+                      href: `mailto:${personalData.email}`,
+                      icon: BsEnvelope,
+                      color: "#ffffff",
                     },
                   ].map((social, idx) => (
                     <Link
