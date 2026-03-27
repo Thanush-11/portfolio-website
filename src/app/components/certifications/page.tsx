@@ -4,6 +4,8 @@ import { certifications } from "@/../utils/Data/certifications";
 import SectionReveal from "../SectionReveal";
 import Tilt from "react-parallax-tilt";
 import { BadgeCheck, Calendar, BookOpen } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 function Certifications() {
   return (
@@ -14,7 +16,7 @@ function Certifications() {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-gradient-to-r from-transparent to-red-600"></span>
           <span className="bg-[#050505] border border-red-600/30 w-fit text-white p-3 px-8 text-2xl font-bold rounded-full shadow-[0_0_20px_rgba(220,38,38,0.2)]">
-            Certifications & Training
+            Certifications & Technical Training
           </span>
           <span className="w-24 h-[2px] bg-gradient-to-l from-transparent to-red-600"></span>
         </div>
@@ -69,6 +71,17 @@ function Certifications() {
                         </span>
                       ))}
                     </div>
+
+                    {certification.link && (
+                      <Link
+                        href={certification.link}
+                        target="_blank"
+                        className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-red-400 hover:text-red-500 transition-colors"
+                      >
+                        View Credentials
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </div>
 
