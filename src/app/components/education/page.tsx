@@ -18,7 +18,7 @@ function Education() {
   return (
     <div
       id="education"
-      className="relative z-50 py-16 lg:py-30 bg-[#050505] overflow-hidden"
+      className="relative z-50 pt-12 lg:pt-30 bg-[#050505] overflow-hidden scroll-mt-24 lg:scroll-mt-28"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none" />
 

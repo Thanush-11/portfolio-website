@@ -1,15 +1,11 @@
 "use client";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { FaFacebook, FaStackOverflow } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import { personalData } from "@/../utils/Data/PersonalData";
-import ContactWithoutCaptcha from "./contact-without-captcha";
 import SectionReveal from "../SectionReveal";
 import { MapPin, Send, MessageSquare } from "lucide-react";
-import { BsEnvelope } from "react-icons/bs";
 
 interface ContactLinkProps {
   href: string;
@@ -59,7 +55,7 @@ const ContactInfoCard = ({
 
 function ContactSection() {
   return (
-    <div id="contact" className="relative z-50 py-24 lg:py-48 overflow-hidden">
+    <div id="contact" className="relative z-50 py-20 lg:py-48 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-500/10 blur-[150px] rounded-full pointer-events-none" />
 
@@ -134,7 +130,7 @@ function ContactSection() {
                       icon: IoLogoGithub,
                       color: "#ffffff",
                       label: "GitHub",
-                      value: "Thanush-11",
+                      value: "Thanush-arugonda",
                     },
                     {
                       href: personalData.linkedIn,
