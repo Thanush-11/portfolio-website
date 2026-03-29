@@ -133,28 +133,45 @@ function ContactSection() {
                       href: personalData.github,
                       icon: IoLogoGithub,
                       color: "#ffffff",
+                      label: "GitHub",
+                      value: "Thanush-11",
                     },
                     {
                       href: personalData.linkedIn,
                       icon: BiLogoLinkedin,
                       color: "#0077b5",
-                    },
-                    {
-                      href: `mailto:${personalData.email}`,
-                      icon: BsEnvelope,
-                      color: "#ffffff",
+                      label: "LinkedIn",
+                      value: "Thanush Arugonda",
                     },
                   ].map((social, idx) => (
                     <Link
                       key={idx}
                       href={social.href}
-                      target="_blank"
-                      className="w-14 h-14 rounded-2xl border border-white/5 bg-white/[0.02] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/20 hover:scale-110 transition-all duration-300"
+                      target={
+                        social.href.startsWith("mailto") ? "_self" : "_blank"
+                      }
+                      className="group flex items-center gap-4 p-4 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-300 shadow-xl w-full"
                     >
-                      <social.icon
-                        className="w-6 h-6"
-                        style={{ color: social.color }}
-                      />
+                      {/* Icon */}
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center"
+                        style={{ backgroundColor: `${social.color}15` }}
+                      >
+                        <social.icon
+                          className="w-6 h-6"
+                          style={{ color: social.color }}
+                        />
+                      </div>
+
+                      {/* Text */}
+                      <div className="flex flex-col">
+                        <span className="text-[12px] text-slate-500 uppercase tracking-widest font-bold">
+                          {social.label}
+                        </span>
+                        <span className="text-sm text-slate-200 font-medium group-hover:text-white">
+                          {social.value}
+                        </span>
+                      </div>
                     </Link>
                   ))}
                 </div>

@@ -1,3 +1,5 @@
+// File to be deleted
+
 "use client";
 
 import emailjs from "@emailjs/browser";
